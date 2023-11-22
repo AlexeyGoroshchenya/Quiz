@@ -1,0 +1,155 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: NeueMachina;
+  src: url(../fonts/NeueMachina-Ultrabold.ttf);
+}
+
+@font-face {
+  font-family: NeueMachina;
+  src: url(../fonts/NeueMachina-Bold.ttf);
+}
+
+
+
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*============================================================================*/
+
+
+body {
+  background-color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+overflow-x: auto;
+}
+
+.body__wrapper {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.button{
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  padding: 10px 32px;
+    background-color: black;
+    color: #FFFFFF;
+    border-radius: 15px;
+    font-size: 20px;
+}
+
+@media (max-width: 1300px) {
+  .button {
+      padding: 10px 24px;
+  }
+}
+
+.button:hover{
+  background-color: #9E00FF;
+}
+
+.socials__list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.57em;
+}
+
+.socials__link{
+  transition-duration: 0.15s;
+  transition-timing-function: ease;
+  cursor: pointer;
+}
+.socials__link:hover{
+  transform: scale(1.05);
+}
