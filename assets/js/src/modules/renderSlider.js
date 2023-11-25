@@ -9,37 +9,37 @@ export const renderSlider = () => {
 		{
 			name: 'Андрей Пархимович',
 			text: 'Можно было бы сделать динамическую высоту карточки, но с переполнением контентом это может смотреться плохо, Поэтому сделал так. Можно было бы сделать динамическую высоту карточки, но с переполнением контентом это может смотреться плохо, Поэтому сделал так',
-			avatar: './assets/img/main/reviews/avatars/1.jpg',
+			avatar: './assets/img/main/reviews/avatars/1.webp',
 			background: './assets/img/main/reviews/bg/43611.webp'
 		},
 		{
 			name: 'Андрей Иванов',
 			text: 'Можно было бы сделать динамическую высоту карточки, но с переполнением контентом это может смотреться плохо, Поэтому сделал так',
-			avatar: './assets/img/main/reviews/avatars/2.jpg',
+			avatar: './assets/img/main/reviews/avatars/2.webp',
 			background: './assets/img/main/reviews/bg/43602.webp'
 		},
 		{
 			name: 'Лев Толстой',
 			text: 'Можно было бы сделать динамическую высоту карточки, но с переполнением контентом это может смотреться плохо, Поэтому сделал так',
-			avatar: './assets/img/main/reviews/avatars/3.jpg',
+			avatar: './assets/img/main/reviews/avatars/3.webp',
 			background: './assets/img/main/reviews/bg/43611.webp'
 		},
 		{
 			name: 'Николай Андреев',
 			text: 'Можно было бы сделать динамическую высоту карточки, но с переполнением контентом это может смотреться плохо, Поэтому сделал так',
-			avatar: './assets/img/main/reviews/avatars/1.jpg',
+			avatar: './assets/img/main/reviews/avatars/1.webp',
 			background: './assets/img/main/reviews/bg/43602.webp'
 		},
 		{
 			name: 'Андрей Николаев',
 			text: 'Можно было бы сделать динамическую высоту карточки, но с переполнением контентом это может смотреться плохо, Поэтому сделал так',
-			avatar: './assets/img/main/reviews/avatars/2.jpg',
+			avatar: './assets/img/main/reviews/avatars/2.webp',
 			background: './assets/img/main/reviews/bg/43611.webp'
 		},
 		{
 			name: 'Николай Гоголь',
 			text: 'Можно было бы сделать динамическую высоту карточки, но с переполнением контентом это может смотреться плохо, Поэтому сделал так',
-			avatar: './assets/img/main/reviews/avatars/3.jpg',
+			avatar: './assets/img/main/reviews/avatars/3.webp',
 			background: './assets/img/main/reviews/bg/43602.webp'
 		},
 	]
