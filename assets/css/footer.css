@@ -57,10 +57,6 @@
     }
 }
 
-.footer__contact {}
-
-.contact {}
-
 .contact__title {
     padding-bottom: 16px;
 }
@@ -99,15 +95,11 @@
     background-color: #ffffff;
 }
 
-.footer__socials {}
-
 @media (max-width: 480px) {
     .footer__socials {
         gap: 2px;
     }
 }
-
-.socials__list {}
 
 .socials__link-footer {
     width: 323px;
@@ -151,8 +143,6 @@
 .socials__link-footer:nth-child(3) {
     background-color: #34AADF;
 }
-
-
 
 .socials__link-footer img {
     height: 100%;

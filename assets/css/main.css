@@ -181,12 +181,7 @@
     }
 }
 
-.quiz__history {}
-
-
 .history-quiz {
-
-
     border-radius: 24px;
     font-weight: 500;
     font-size: 16px;
@@ -197,23 +192,18 @@
     overflow: hidden;
 }
 
-
-
 @media (max-width: 1460px) {
     .history-quiz {
         transform: translateX(-20px);
     }
-
 }
 
 @media (max-width: 1023.98px) {
     .history-quiz {
         flex: auto;
         max-width: none;
-
     }
 }
-
 
 .history-quiz__item {
     padding: 10px 24px;
@@ -242,8 +232,6 @@
     right: 10px;
 }
 
-
-
 @media (max-width: 1460px) {
     .history-quiz__item {
         padding-right: 48px;
@@ -254,8 +242,6 @@
 .history-quiz__title {
     font-weight: 700;
 }
-
-.history-quiz__text {}
 
 .quiz__container {
     flex: 1 1 auto;
@@ -288,21 +274,16 @@
     left: 2.5%;
     width: 95%;
     height: 8px;
-    /* transform: translateX(-50%); */
     background-color: #F0D9FF;
 }
 
 .quiz__textbox {
     padding: 32px 0;
-
 }
-
-.quiz__textbox_start {}
 
 .quiz__textbox_finish {
     display: none;
 }
-
 
 .quiz__title {
     font-family: NeueMachina;
@@ -314,12 +295,10 @@
 
 @media (max-width: 1200px) {
 
-
     .quiz__title {
         font-size: 50px;
         line-height: 49.48px;
     }
-
 }
 
 .quiz__question {
@@ -336,7 +315,6 @@
     gap: 8px;
     font-weight: 500;
     line-height: 28.18px;
-
 }
 
 .quiz__answer {
@@ -480,7 +458,6 @@
     display: none;
 }
 
-.quiz__button_next {}
 
 /* --------------------------------------------------------------------------------------------  */
 
@@ -488,13 +465,8 @@
     height: 100%;
     padding: 95px 0;
     position: relative;
-
     display: none;
 }
-
-/* .reviews__body {
-    height: fit-content;
-} */
 
 .reviews__slider {
     border-radius: 32px;
@@ -512,7 +484,6 @@
     height: 460px;
     border-radius: 32px;
     background-color: rgba(0, 0, 0, 0.493);
-
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -529,7 +500,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-cursor: pointer;
+    cursor: pointer;
     box-shadow: 0px 24px 35px 0px #9E00FF4D;
 
 }
@@ -558,7 +529,6 @@ cursor: pointer;
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* overflow: hidden; */
 }
 
 .slide-reviews__ava {
@@ -575,7 +545,6 @@ cursor: pointer;
     bottom: -40px;
     left: 50%;
     transform: translateX(-40px);
-
 }
 
 .slide-reviews__frame {
