@@ -1,13 +1,20 @@
 import { burger } from './modules/burger';
+import { nav } from './modules/nav';
+import { quiz } from './modules/quiz';
 
-import { swiper } from './modules/swiper';
-import { scroll } from './modules/scroll';
 import { formModals } from './modules/formModals';
-
-import { sendForm } from './modules/sendForm';
-
+import { renderSlider } from './modules/renderSlider';
 
 
-burger();
-swiper()
+
+
+
+burger()
+nav()
+quiz()
+formModals()
+renderSlider()
+
+
+
 

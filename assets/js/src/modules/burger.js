@@ -38,7 +38,7 @@ export const burger = () => {
 
         }
 
-        if (e.target.closest('.nav-header__link')) {
+        if (e.target.closest('a.nav-header__link') || e.target.closest('.header__contact')) {
             // e.preventDefault()
             if (document.querySelector('.header__menu_active')) {
 

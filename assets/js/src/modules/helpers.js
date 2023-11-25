@@ -53,27 +53,7 @@ export const unblockBody = () => {
 
 }
 
-export const openModal = (elem, className) => {
-    if (elem) {
-        elem.style.display = 'flex';
-        blockBody();
 
-        setTimeout(() => {
-            elem.classList.remove(className);
-        }, 300)
-    }
-}
-
-export const closeModal = (elem, className) => {
-    if (elem) {
-        unblockBody();
-
-        elem.classList.add(className);
-        setTimeout(() => {
-            elem.style.display = 'none';
-        }, 300)
-    }
-}
 
 
 

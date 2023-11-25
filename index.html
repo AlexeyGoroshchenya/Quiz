@@ -28,9 +28,17 @@
 			<nav class="header__nav">
 				<div class="nav-header__list">
 					<a href="#home" class="nav-header__link nav-header__link-active">Главная</a>
-					<div class="nav-header__link">Квиз</div>
-					<div class="nav-header__link">Отзывы</div>
-					<div class="nav-header__link">Не главная</div>
+					<a href="#quiz" class="nav-header__link">Квиз</a>
+					<a href="#reviews" class="nav-header__link">Отзывы</a>
+					<div class="nav-header__link">
+						<span>Не главная</span>
+						<div class="nav-header__sublist">
+							<div class="nav-header__sublink button">Не главная</div>
+							<div class="nav-header__sublink button">Подпункт</div>
+							<div class="nav-header__sublink button">Другой подпункт</div>
+							<div class="nav-header__sublink button">Еще какой-то подпункт</div>
+						</div>
+					</div>
 				</div>
 			</nav>
 			<div class="header__contacts">
@@ -90,38 +98,64 @@
 
 
 
-		<section class="quiz">
+		<section class="quiz quiz__container">
+			<a name="quiz"></a>
 			<div class="quiz__history history-quiz">
-				<div class="history-quiz__item">
+				<!-- <div class="history-quiz__item">
 					<div class="history-quiz__title">Какие виды тестов вам нравятся?</div>
 					<div class="history-quiz__text">Кто я из вселенной Марвел, На словарный запас</div>
-				</div>
-				</div>
+				</div> -->
+			</div>
 			<div class="quiz__container">
-				<div class="quiz__textbox">
-					<div class="quiz__title">Какие виды тестов вам нравятся?</div>
-				<div class="quiz__question">Многие из нас хоть раз попадались на эту удочку — хочешь пройти всего один тест из интернета, и вдруг понимаешь, что пролетело полдня.</div>
-				<div class="quiz__ansvers">
-					<p class="quiz__ansver">На темперамент</p>
-					<div class="quiz__ansver">Кто я из вселенной Марвел</div>
-					<div class="quiz__ansver">Увидел это</div>
-					<div class="quiz__ansver">Мое тотемное животное</div>
-					<div class="quiz__ansver">На IQ</div>
-					<div class="quiz__ansver">На словарный запас</div>
-					<div class="quiz__ansver">На логическое мышление</div>
-					<div class="quiz__ansver">На уровень интеллекта</div>
+				<div class="quiz__textbox quiz__textbox_start">
+					<div id="quiz-title" class="quiz__title">
+						<!-- Какие виды тестов вам нравятся? -->
+					</div>
+					<div class="quiz__question" data-question="1">
+						<!-- Многие из нас хоть раз попадались на эту удочку —
+						хочешь пройти всего один тест из интернета, и вдруг понимаешь, что пролетело полдня. -->
+					</div>
+					<div class="quiz__answers">
+						<!-- <p class="quiz__answer" data-num="1">На темперамент</p>
+						<div class="quiz__answer" data-num="2">Кто я из вселенной Марвел</div>
+						<div class="quiz__answer" data-num="3">Увидел это</div>
+						<div class="quiz__answer" data-num="4">Мое тотемное животное</div>
+						<div class="quiz__answer" data-num="5">На IQ</div>
+						<div class="quiz__answer" data-num="6">На словарный запас</div>
+						<div class="quiz__answer" data-num="7">На логическое мышление</div>
+						<div class="quiz__answer" data-num="8">На уровень интеллекта</div> -->
+					</div>
+					<div class="quiz__input">
+						<p><input type="text" placeholder="Напишите ваше мнение"></p>
+
+						<select value="select">
+
+
+							<!-- <option value=''>value 1</option>
+							<option value=''>value 2</option>
+							<option value=''>value 3</option>
+							<option value=''>value 4</option> -->
+
+						</select>
+					</div>
+					<div class="quiz__buttons">
+						<div class="quiz__button quiz__button_prev button">Назад</div>
+						<div class="quiz__button quiz__button_next button">Продолжить</div>
+					</div>
 				</div>
-				<div class="quiz__buttons">
-					<div class="quiz__button quiz__button_prev button">Назад</div>
-					<div class="quiz__button quiz__button_next button">Продолжить</div>
+				<div class="quiz__textbox quiz__textbox_finish">
+					<div class="quiz__title">
+						Спасибо за участие. Заходите еще!
+					</div>
+
+
 				</div>
-				</div>
-				
 			</div>
 		</section>
 
 
-		<section class="reviews ">
+		<section class="reviews reviews__container">
+			<a name="reviews"></a>
 			<div class="reviews__slider swiper">
 
 				<div class="reviews__body swiper-wrapper">
@@ -294,7 +328,96 @@
 		</div>
 	</footer>
 
+	<div class="loader">
+		<div class="loader__spinner"></div>
+	</div>
 
+	<div class="modal">
+		<div class="modal__body">
+			<div class="modal__close"> <img src="/assets/img/main/cross.svg" alt="close"> </div>
+			<div class="modal__image"><img src="/assets/img/main/success-submit.png" alt=""></div>
+			<div class="modal__title">Заполните контактные
+				данные</div>
+			<div class="modal__content">
+				<div class="modal__frame">
+					<form action="#" class="modal__form form-modal">
+						<div class="form-modal__desc">
+							Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех людей, которые любят
+							проходить тесты!
+						</div>
+						<div class="form-modal__inputs">
+							<div class="form-modal__row">
+								<input type="text" name="name" class="form-modal__name" placeholder="Ваше имя"></input>
+								<input type="text" name="surname" class="form-modal__surname"
+									placeholder="Ваша фамилия"></input>
+							</div>
+							<div class="form-modal__row">
+								<input type="text" name="message" class="form-modal__comment"
+									placeholder="Ваш комментарий"></input>
+
+								<div class="form-modal__upload">
+									<input type="file" name="file" id="input__file"
+										accept="image/jpeg,image/png"></input>
+
+									<label for="input__file" class="input__file-button">
+
+										<span class="input__file-button-text">Выберите файл</span>
+										<span class="input__file-button-text notification-image"></span>
+									</label>
+								</div>
+
+
+							</div>
+
+
+
+						</div>
+
+						<div class="form-modal__notification"></div>
+
+
+						<div class="form-modal__choose">Этот квиз предназначен для тех людей, которые любят проходить
+							тесты!</div>
+						<div class="form-modal__radios">
+							<div class="form-modal__radio" data-num="1">
+								<p>первое</p>
+							</div>
+							<div class="form-modal__radio" data-num="2">
+								<p>второе</p>
+							</div>
+							<div class="form-modal__radio" data-num="3">
+								<p>третье</p>
+							</div>
+							<div class="form-modal__radio" data-num="4">
+								<p>еще что-то</p>
+							</div>
+							<div class="form-modal__radio" data-num="5">
+								<p>что-то другое</p>
+							</div>
+							<div class="form-modal__radio" data-num="6">
+								<p>новое что-то</p>
+							</div>
+						</div>
+
+						<button type="submit" class="form-modal__button button">Продолжить</button>
+					</form>
+
+					<div class="modal__success success-modal">
+						<div class="success-modal__text">Пройди квиз, и будешь счастлив. Этот квиз предназначен для тех
+							людей,
+							которые любят проходить тесты!</div>
+						<div class="success-modal__button button">Вернуться на сайт</div>
+					</div>
+				</div>
+
+
+			</div>
+
+
+		</div>
+
+	</div>
+	</div>
 
 
 </body>
