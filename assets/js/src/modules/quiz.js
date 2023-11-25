@@ -244,6 +244,15 @@ export const quiz = () => {
 
     document.addEventListener('click', (e) => {
 
+
+        if (e.target.closest('a.home__button')){
+            e.preventDefault()
+
+            let anchor = e.target.href.slice(e.target.href.indexOf('#'))
+            document.querySelector(anchor).scrollIntoView({ behavior: "smooth", block: "center", inline: "start" }) //
+
+        }
+
         if (e.target.closest('.quiz__answer')) {
 
 
