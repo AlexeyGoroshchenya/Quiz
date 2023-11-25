@@ -2,12 +2,12 @@
 
 @font-face {
   font-family: NeueMachina;
-  src: url(../fonts/NeueMachina-Ultrabold.ttf);
+  src: url('../fonts/NeueMachina-Ultrabold.ttf');
 }
 
 @font-face {
   font-family: NeueMachina;
-  src: url(../fonts/NeueMachina-Bold.ttf);
+  src: url('../fonts/NeueMachina-Bold.ttf');
 }
 
 
@@ -487,7 +487,7 @@ body {
   padding: 10px 20px;
   border-radius: 5px;
   background-color: black;
-  background-image: url('./assets/img/main/upload.png');
+  background-image: url('/assets/img/main/upload.png');
   background-repeat: no-repeat;
   background-position: right;
   color: #FFFFFF;
@@ -508,7 +508,7 @@ body {
   height: 80%;
 
 
-  background-image: url('./assets/img/main/warning.png');
+  background-image: url('/assets/img/main/warning.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

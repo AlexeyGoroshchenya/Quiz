@@ -27,6 +27,9 @@ export const formModals = () => {
 
     const sendForm = async (data) => {
 
+
+
+
         // данные в атрибуте data в данном случае собраны в объект formData
         //jsonplaceholder не поддерживает formData поэтому тут ничего не отправляется. иначе нужно было бы приложить его в body запроса и поменять headers Content-type на multipart/form-data
 
@@ -91,6 +94,13 @@ export const formModals = () => {
         if (document.querySelector('.form-modal__radio_active')) {
             formData.append('choose', document.querySelector('.form-modal__radio_active').dataset.num)
         }
+
+
+        for (const data of formData) {
+            console.log(data);
+        }
+
+
 
         try {
             if (validateForm()) {
