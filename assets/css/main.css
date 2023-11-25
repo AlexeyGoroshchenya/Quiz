@@ -11,7 +11,7 @@
     width: 100%;
 
 
-    background-image: url('/assets/img/main/home/1.jpg'), url('/assets/img/main/home/2.jpg');
+    background-image: url('./assets/img/main/home/1.jpg'), url('./assets/img/main/home/2.jpg');
     background-repeat: no-repeat;
     background-position: left bottom, right bottom;
     background-size: 260px 290px, 260px 290px;
@@ -147,23 +147,23 @@
 }
 
 .home__smile:nth-child(1) {
-    background-image: url('/assets/img/main/home/s1.png');
+    background-image: url('./assets/img/main/home/s1.png');
 }
 
 .home__smile:nth-child(2) {
-    background-image: url('/assets/img/main/home/s2.png');
+    background-image: url('./assets/img/main/home/s2.png');
 }
 
 .home__smile:nth-child(3) {
-    background-image: url('/assets/img/main/home/s3.png');
+    background-image: url('./assets/img/main/home/s3.png');
 }
 
 .home__smile:nth-child(4) {
-    background-image: url('/assets/img/main/home/s3.png');
+    background-image: url('./assets/img/main/home/s3.png');
 }
 
 .home__smile:nth-child(5) {
-    background-image: url('/assets/img/main/home/s3.png');
+    background-image: url('./assets/img/main/home/s3.png');
 }
 
 
@@ -235,7 +235,7 @@
 }
 
 .history-quiz__item::after {
-    content: url('/assets/img/main/arrow-white.svg');
+    content: url('./assets/img/main/arrow-white.svg');
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -455,7 +455,7 @@
     border-radius: 16px;
     border: 1px solid black;
     appearance: none;
-    background: url('/assets/img/main/arrow-up.png') no-repeat right;
+    background: url('./assets/img/main/arrow-up.png') no-repeat right;
     background-position-x: calc(100% - 8px);
     font-size: 20px;
 }
@@ -512,7 +512,7 @@
     height: 460px;
     border-radius: 32px;
     background-color: rgba(0, 0, 0, 0.493);
-    /* background-image: url('/assets/img/main/reviews/bg/43611.jpg'); */
+    /* background-image: url('./assets/img/main/reviews/bg/43611.jpg'); */
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
