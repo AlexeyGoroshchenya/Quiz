@@ -27,7 +27,7 @@ export const formModals = () => {
 
     const sendForm = async (data) => {
 
-
+        console.log(Object.fromEntries(data));
 
 
         // данные в атрибуте data в данном случае собраны в объект formData
@@ -93,11 +93,6 @@ export const formModals = () => {
 
         if (document.querySelector('.form-modal__radio_active')) {
             formData.append('choose', document.querySelector('.form-modal__radio_active').dataset.num)
-        }
-
-
-        for (const data of formData) {
-            console.log(data);
         }
 
 
