@@ -186,7 +186,7 @@
 
 .history-quiz {
 
-    
+
     border-radius: 24px;
     font-weight: 500;
     font-size: 16px;
@@ -208,9 +208,9 @@
 
 @media (max-width: 1023.98px) {
     .history-quiz {
-     flex: auto;
-     max-width:none;
-     
+        flex: auto;
+        max-width: none;
+
     }
 }
 
@@ -221,25 +221,25 @@
     transition: all 0.15s ease;
     position: relative;
     background-color: rgba(255, 255, 255, 1);
-     color: rgb(0, 0, 0);
-     cursor: pointer;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 
-.history-quiz__item_active{
+.history-quiz__item_active {
     background-color: rgb(0, 0, 0);
-     color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 .history-quiz__item:hover {
     background-color: #9E00FF;
 }
 
-.history-quiz__item::after{
-content: url('/assets/img/main/arrow-white.svg');
-position: absolute;
-top: 50%;
-transform: translateY(-50%);
-right: 10px;
+.history-quiz__item::after {
+    content: url('/assets/img/main/arrow-white.svg');
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
 }
 
 
@@ -362,59 +362,60 @@ right: 10px;
 }
 
 .quiz__answer input[type="radio"],
-.quiz__answer input[type="checkbox"]{
+.quiz__answer input[type="checkbox"] {
     opacity: 0;
     visibility: hidden;
 }
 
 .quiz__answer_active:has(input[type="radio"]):hover,
-.quiz__answer_active:has(input[type="checkbox"]):hover{
+.quiz__answer_active:has(input[type="checkbox"]):hover {
     background-color: black;
     border: 1px solid black;
 }
 
 .quiz__answer:has(input[type="radio"])::after,
-.quiz__answer_active:has(input[type="checkbox"])::after{
-    
-position: absolute;
-font-size: 34px;
-width: 18px;
-height: 18px;
-border-radius: 50%;
-border: 1px solid black;
-top: 50%;
-transform:  rotate(45deg) translateY(-62%);
-left: 10px;
+.quiz__answer_active:has(input[type="checkbox"])::after {
+
+    position: absolute;
+    font-size: 34px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid black;
+    top: 50%;
+    transform: rotate(45deg) translateY(-62%);
+    left: 10px;
 }
 
-.quiz__answer:has(input[type="radio"])::after{
+.quiz__answer:has(input[type="radio"])::after {
     content: '';
     border: 1px solid black;
 }
-.quiz__answer_active:has(input[type="checkbox"])::after{
-content: '+';
-display: flex;
-justify-content: center;
-align-items: center;
+
+.quiz__answer_active:has(input[type="checkbox"])::after {
+    content: '+';
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
-.quiz__answer:has(input[type="radio"]):hover::after{
+.quiz__answer:has(input[type="radio"]):hover::after {
     border: 1px solid white;
 }
 
 .quiz__answer_active:has(input[type="radio"]):hover::after,
-.quiz__answer_active:has(input[type="checkbox"]):hover::after{
+.quiz__answer_active:has(input[type="checkbox"]):hover::after {
     background-color: #9E00FF;
     border: 1px solid #9E00FF;
 }
 
-.quiz__answer_active:has(input[type="radio"]):hover::after{
+.quiz__answer_active:has(input[type="radio"]):hover::after {
     border: 3px solid white;
 }
 
 .quiz__answer_active:has(input[type="radio"])::after,
-.quiz__answer_active:has(input[type="checkbox"])::after{
+.quiz__answer_active:has(input[type="checkbox"])::after {
     border: 3px solid white;
 }
 
@@ -624,4 +625,3 @@ align-items: center;
 
 
 /* ----------------------------------------------------------------------------------------------- */
-

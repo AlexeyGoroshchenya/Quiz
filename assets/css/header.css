@@ -104,12 +104,12 @@
     color: black;
     border-radius: 10px;
     position: relative;
-    background-color: aquamarine;
+
 }
+
 
 .nav-header__link-active {
     position: relative;
-
 }
 
 .nav-header__link-active::after {
@@ -129,26 +129,26 @@
     position: absolute;
     top: 0;
     left: 0;
-opacity: 0;
-visibility: hidden;
-transform: scale(0);
-z-index: 5;
-display: flex;
-flex-direction: column;
-gap: 10px;
-transition-duration: 0.15s;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition-duration: 0.15s;
 }
 
 .nav-header__sublist_active {
 
-opacity: 1;
-visibility: visible;
-transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
 }
 
 .nav-header__sublink {
-width: fit-content;
-font-size: 18px;
+    width: fit-content;
+    font-size: 18px;
 }
 
 .header__contacts {
@@ -176,9 +176,7 @@ font-size: 18px;
     }
 }
 
-.header__contact {
-    
-}
+.header__contact {}
 
 
 

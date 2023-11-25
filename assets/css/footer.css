@@ -25,10 +25,10 @@
 
 .footer__logo {
     font-family: NeueMachina;
-font-size: 30px;
-font-weight: 700;
-line-height: 35px;
-align-self: flex-end;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    align-self: flex-end;
 }
 
 @media (max-width: 930px) {
@@ -43,6 +43,7 @@ align-self: flex-end;
     align-items: flex-start;
 
 }
+
 .footer__contacts {
     display: flex;
     gap: 48px;
@@ -56,15 +57,14 @@ align-self: flex-end;
     }
 }
 
-.footer__contact {
-}
-.contact {
-    
+.footer__contact {}
 
-}
+.contact {}
+
 .contact__title {
     padding-bottom: 16px;
 }
+
 .contact__text {
     font-family: NeueMachina;
     font-size: 45px;
@@ -72,22 +72,22 @@ align-self: flex-end;
     line-height: 46px;
     position: relative;
     padding-bottom: 5px;
-    
+
 }
 
 @media (max-width: 1400px) {
     .contact__text {
         font-size: 36px;
     }
-  }
+}
 
-  @media (max-width: 1200px) {
+@media (max-width: 1200px) {
     .contact__text {
         font-size: 24px;
         line-height: 24px;
     }
-  
-  }
+
+}
 
 .contact__text::after {
     content: '';
@@ -99,19 +99,17 @@ align-self: flex-end;
     background-color: #ffffff;
 }
 
-.footer__socials {
-}
+.footer__socials {}
 
 @media (max-width: 480px) {
     .footer__socials {
         gap: 2px;
-    }   
+    }
 }
 
-.socials__list {
-}
+.socials__list {}
 
-.socials__link-footer{
+.socials__link-footer {
     width: 323px;
     height: 71px;
     border-radius: 35px;
@@ -122,38 +120,40 @@ align-self: flex-end;
 }
 
 @media (max-width: 1400px) {
-    .socials__link-footer{
+    .socials__link-footer {
         width: 260px;
     }
 }
 
 @media (max-width: 1200px) {
-    .socials__link-footer{
+    .socials__link-footer {
         width: 175px;
         height: 36px;
     }
 }
 
 @media (max-width: 767.98px) {
-    .socials__link-footer{
+    .socials__link-footer {
         width: 90px;
         height: 36px;
     }
 }
 
-.socials__link-footer:nth-child(1){
+.socials__link-footer:nth-child(1) {
     background-color: #0F0F0F;
     border: 1px solid #313131;
 }
-.socials__link-footer:nth-child(2){
+
+.socials__link-footer:nth-child(2) {
     background-color: #4D76A1;
 }
-.socials__link-footer:nth-child(3){
+
+.socials__link-footer:nth-child(3) {
     background-color: #34AADF;
 }
 
 
 
-.socials__link-footer img{
+.socials__link-footer img {
     height: 100%;
 }

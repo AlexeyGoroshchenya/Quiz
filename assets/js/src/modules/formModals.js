@@ -10,7 +10,7 @@ export const formModals = () => {
     const modalForm = modal.querySelector('.modal__form')
     const modalSuccess = modal.querySelector('.modal__success')
     const modalImage = modal.querySelector('.modal__image')
-    
+
     const modalMessage = modal.querySelector('.form-modal__comment')
     const notification = modal.querySelector('.form-modal__notification')
     const notificationImage = modal.querySelector('.notification-image')
@@ -53,18 +53,18 @@ export const formModals = () => {
         modalSuccess.style.display = 'block'
     }
 
-const showErrorMessage = (str, input)=>{
-    notificationImage.style.display = 'block'
-    notification.style.display = 'flex'
-    notification.textContent = str
-    input.classList.add('invalid')
-}
+    const showErrorMessage = (str, input) => {
+        notificationImage.style.display = 'block'
+        notification.style.display = 'flex'
+        notification.textContent = str
+        input.classList.add('invalid')
+    }
 
-const hideErrorMessage = ()=>{
-    notificationImage.style.display = 'none'
-    notification.style.display = 'none'
-    if(modal.querySelector('.invalid')) modal.querySelector('.invalid').classList.remove('invalid')
-}
+    const hideErrorMessage = () => {
+        notificationImage.style.display = 'none'
+        notification.style.display = 'none'
+        if (modal.querySelector('.invalid')) modal.querySelector('.invalid').classList.remove('invalid')
+    }
 
     const validateForm = () => {
 
@@ -72,11 +72,11 @@ const hideErrorMessage = ()=>{
 
         // здесь бы использовать более адекватные критерии валидации, а заодно валидировать остальные инпуты формы, но для демонстрации вот так сделал 
 
-        if(modalMessage.value.length < 2) {
+        if (modalMessage.value.length < 2) {
             message = false
-            
+
             showErrorMessage("Это обязательное поле", modalMessage)
-           
+
         } else {
             hideErrorMessage()
         }
@@ -95,7 +95,7 @@ const hideErrorMessage = ()=>{
         try {
             if (validateForm()) {
                 sendForm(formData).then((res) => {
-                    
+
                     changeModalPage()
                 })
             }
@@ -143,12 +143,12 @@ const hideErrorMessage = ()=>{
                 let fileNameStart = e.target.value.indexOf('fakepath\\') + 9
 
                 //на мобильных разрешениях не будет хватать наглядности что файл добавлен
-                e.target.closest('.form-modal__upload').querySelector('span:first-child').textContent = e.target.value.slice(fileNameStart)  
+                e.target.closest('.form-modal__upload').querySelector('span:first-child').textContent = e.target.value.slice(fileNameStart)
 
                 if (e.target.files[0].size > 1e+6) {
-                    
+
                     showErrorMessage("Максимальный размер файла 1Мб", modal.querySelector('.form-modal__upload'))
-                    
+
                 } else { hideErrorMessage() }
             }
         }

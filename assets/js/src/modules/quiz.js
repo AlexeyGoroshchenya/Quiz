@@ -245,16 +245,16 @@ export const quiz = () => {
     document.addEventListener('click', (e) => {
 
         if (e.target.closest('.quiz__answer')) {
-            
+
 
             if (quizQuestion.dataset.type !== 'radio') {
                 e.target.closest('.quiz__answer').classList.toggle('quiz__answer_active')
             } else {
-                if(document.querySelector('.quiz__answer_active')) {document.querySelector('.quiz__answer_active').classList.remove('quiz__answer_active')}
+                if (document.querySelector('.quiz__answer_active')) { document.querySelector('.quiz__answer_active').classList.remove('quiz__answer_active') }
                 e.target.closest('.quiz__answer').classList.add('quiz__answer_active')
             }
 
-            
+
         }
 
         if (e.target.closest('.quiz__button_next')) {
@@ -273,14 +273,14 @@ export const quiz = () => {
 
 
 
-           
+
 
             if (parseFloat(quizQuestion.dataset.question) === questions.length) {
                 finishQuiz()
 
             } else {
                 renderQuestionByIndex(questionInd + 1)
-                 renderHistory()
+                renderHistory()
             }
 
             console.log(answerData);
@@ -309,11 +309,11 @@ export const quiz = () => {
         if (e.target.closest('.history-quiz__item')) {
             let numberGoTo = e.target.closest('.history-quiz__item').dataset.num
 
-            if(document.querySelector('.history-quiz__item_active')) {
+            if (document.querySelector('.history-quiz__item_active')) {
                 document.querySelector('.history-quiz__item_active').classList.remove('history-quiz__item_active')
                 e.target.closest('.history-quiz__item').classList.add('history-quiz__item_active')
             }
-            
+
 
             if (numberGoTo) renderQuestionByIndex(parseFloat(numberGoTo) - 1)
 

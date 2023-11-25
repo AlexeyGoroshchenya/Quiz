@@ -34,6 +34,14 @@ export const nav = () => {
             closeSubMenu()
         }
 
+        if (e.target.matches('a.nav-header__link')) {
+            e.preventDefault()
+
+            let anchor = e.target.href.slice(e.target.href.indexOf('#'))
+            document.querySelector(anchor).scrollIntoView({ behavior: "smooth", block: "center", inline: "start" }) //
+
+        }
+
         if (e.target.closest('div.nav-header__link')) {
            
 
