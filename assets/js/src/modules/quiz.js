@@ -101,8 +101,6 @@ export const quiz = () => {
 
     const renderQuestion = (num) => {
 
-
-
         if (questions[num].type !== 'input') {
             quizTitle.textContent = questions[num].title
             quizQuestion.textContent = questions[num].question
@@ -110,12 +108,8 @@ export const quiz = () => {
             quizQuestion.dataset.type = questions[num].type
             quizAnswers.innerHTML = ''
             questions[num].answers.forEach((item, index) => {
-                let p = document.createElement('p');
-                p.className = "quiz__answer";
-                p.dataset.num = index + 1
-                p.innerHTML = item;
 
-                quizAnswers.append(p)
+                quizAnswers.innerHTML += `<div class="quiz__answer" data-num="${index + 1}"> <input type="${questions[num].type}"> ${item}</div>`
             })
         } else {
             quizTitle.textContent = questions[num].title
@@ -136,16 +130,10 @@ export const quiz = () => {
             })
         }
 
-
-
-
-
         num > 0 ?
             document.querySelector('.quiz__button_prev').style.display = 'block'
             :
             document.querySelector('.quiz__button_prev').style.display = 'none'
-
-
     }
 
     const sendAnswers = async () => {
@@ -193,6 +181,30 @@ export const quiz = () => {
         }
     }
 
+    const writeAnswer = (questionInd, answer) => {
+
+
+        if (parseFloat(quizQuestion.dataset.question) > answerData.length) {
+            answerData.push(answer)
+        } else {
+            answerData[questionInd] = answer
+        }
+    }
+
+    const getAnswer = () => {
+        let answer = []
+        if (quizQuestion.dataset.type !== 'input') {
+
+            document.querySelectorAll('.quiz__answer_active').forEach(item => {
+                answer.push({ number: item.dataset.num, text: item.textContent })
+            })
+        } else {
+            answer.push(quizInput.value)
+        }
+
+        return answer
+    }
+
     const init = function () {
         showLoader()
         try {
@@ -228,35 +240,21 @@ export const quiz = () => {
         quizInput.value = e.target.value
     })
 
-    const writeAnswer = (questionInd, answer) => {
 
-
-        if (parseFloat(quizQuestion.dataset.question) > answerData.length) {
-            answerData.push(answer)
-        } else {
-            answerData[questionInd] = answer
-        }
-    }
-
-    const getAnswer = () => {
-        let answer = []
-        if (quizQuestion.dataset.type !== 'input') {
-
-            document.querySelectorAll('.quiz__answer_active').forEach(item => {
-                answer.push({ number: item.dataset.num, text: item.textContent })
-            })
-        } else {
-            answer.push(quizInput.value)
-        }
-
-        return answer
-    }
 
     document.addEventListener('click', (e) => {
 
         if (e.target.closest('.quiz__answer')) {
+            
 
-            e.target.classList.toggle('quiz__answer_active')
+            if (quizQuestion.dataset.type !== 'radio') {
+                e.target.closest('.quiz__answer').classList.toggle('quiz__answer_active')
+            } else {
+                if(document.querySelector('.quiz__answer_active')) {document.querySelector('.quiz__answer_active').classList.remove('quiz__answer_active')}
+                e.target.closest('.quiz__answer').classList.add('quiz__answer_active')
+            }
+
+            
         }
 
         if (e.target.closest('.quiz__button_next')) {

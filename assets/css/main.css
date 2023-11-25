@@ -322,7 +322,6 @@ right: 10px;
 
 }
 
-
 .quiz__question {
     font-weight: 500;
     font-size: 20px;
@@ -346,6 +345,14 @@ right: 10px;
     border: 1px solid black;
     width: fit-content;
     cursor: pointer;
+    transition-duration: 0.15s;
+    position: relative;
+}
+
+.quiz__answer:hover {
+    background-color: #9E00FF;
+    color: #FFFFFF;
+    border: 1px solid #9E00FF;
 }
 
 .quiz__answer_active {
@@ -353,6 +360,64 @@ right: 10px;
     background-color: black;
     border: 1px solid black;
 }
+
+.quiz__answer input[type="radio"],
+.quiz__answer input[type="checkbox"]{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.quiz__answer_active:has(input[type="radio"]):hover,
+.quiz__answer_active:has(input[type="checkbox"]):hover{
+    background-color: black;
+    border: 1px solid black;
+}
+
+.quiz__answer:has(input[type="radio"])::after,
+.quiz__answer_active:has(input[type="checkbox"])::after{
+    
+position: absolute;
+font-size: 34px;
+width: 18px;
+height: 18px;
+border-radius: 50%;
+border: 1px solid black;
+top: 50%;
+transform:  rotate(45deg) translateY(-62%);
+left: 10px;
+}
+
+.quiz__answer:has(input[type="radio"])::after{
+    content: '';
+    border: 1px solid black;
+}
+.quiz__answer_active:has(input[type="checkbox"])::after{
+content: '+';
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.quiz__answer:has(input[type="radio"]):hover::after{
+    border: 1px solid white;
+}
+
+.quiz__answer_active:has(input[type="radio"]):hover::after,
+.quiz__answer_active:has(input[type="checkbox"]):hover::after{
+    background-color: #9E00FF;
+    border: 1px solid #9E00FF;
+}
+
+.quiz__answer_active:has(input[type="radio"]):hover::after{
+    border: 3px solid white;
+}
+
+.quiz__answer_active:has(input[type="radio"])::after,
+.quiz__answer_active:has(input[type="checkbox"])::after{
+    border: 3px solid white;
+}
+
 
 .quiz__input {
     display: none;
