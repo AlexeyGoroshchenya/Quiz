@@ -10,6 +10,26 @@
   src: url('../fonts/NeueMachina-Bold.ttf');
 }
 
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url('../fonts/Raleway-Bold.ttf');
+}
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url('../fonts/Raleway-Medium.ttf');
+}
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url('../fonts/Raleway-Regular.ttf');
+}
+@font-face {
+  font-family: 'Raleway', sans-serif;
+  src: url('../fonts/Raleway-SemiBold.ttf');
+}
+
+
+
+/* font-family: 'Raleway', sans-serif; */
 
 
 
