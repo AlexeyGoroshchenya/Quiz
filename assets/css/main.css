@@ -11,7 +11,7 @@
     width: 100%;
 
 
-    background-image: url('../img/main/home/1.jpg'), url('../img/main/home/2.jpg');
+    background-image: url('../img/main/home/1.webp'), url('../img/main/home/2.webp');
     background-repeat: no-repeat;
     background-position: left bottom, right bottom;
     background-size: 260px 290px, 260px 290px;

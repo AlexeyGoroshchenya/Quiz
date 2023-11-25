@@ -137,7 +137,7 @@ export const formModals = () => {
     document.addEventListener('input', (e) => {
 
         if (e.target.closest('.form-modal__comment')) {
-            console.log(1);
+            
             validateForm()
         }
 

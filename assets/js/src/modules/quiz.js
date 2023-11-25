@@ -137,13 +137,12 @@ export const quiz = () => {
     }
 
     const sendAnswers = async () => {
+
+
+
         return await fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
-            body: JSON.stringify({
-                name: 'foo',
-                body: 'bar',
-                userId: 1,
-            }),
+            body: JSON.stringify(answerData),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
@@ -292,7 +291,7 @@ export const quiz = () => {
                 renderHistory()
             }
 
-            console.log(answerData);
+           
 
 
 
@@ -305,7 +304,7 @@ export const quiz = () => {
 
             writeAnswer(questionInd, getAnswer())
 
-            console.log(answerData);
+            
 
             document.querySelector('.quiz__input').style.display = 'none'
 
