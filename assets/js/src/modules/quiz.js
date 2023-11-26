@@ -38,7 +38,7 @@ export const quiz = () => {
 
 
     const getQuestions = async (num) => {
-        let res = await fetch(`https:/jsonplaceholder.typicode.com/todos/${num + 1}`)
+        let res = await fetch(`https://jsonplaceholder.typicode.com/todos/${num + 1}`)
 
         return res.json()
     }
@@ -142,7 +142,7 @@ export const quiz = () => {
 
 
 
-        return await fetch('https:/jsonplaceholder.typicode.com/posts', {
+        return await fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
             body: JSON.stringify(answerData),
             headers: {

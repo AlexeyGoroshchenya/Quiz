@@ -32,7 +32,7 @@ export const formModals = () => {
 
         
 
-        let res = await fetch('https:/jsonplaceholder.typicode.com/posts', {
+        let res = await fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
             body: JSON.stringify(Object.fromEntries(data)),
             headers: {

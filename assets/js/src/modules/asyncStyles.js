@@ -4,7 +4,7 @@ export const asyncStyles = () => {
         let elem = document.createElement('link');
     elem.rel = 'stylesheet';
     elem.href = url
-    document.head.appendChild(elem);
+    document.head.append(elem);
     }
     
     createLink('assets/css/reviews.css')

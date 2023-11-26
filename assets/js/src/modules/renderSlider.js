@@ -46,7 +46,7 @@ export const renderSlider = () => {
 
 
 	const getReviews = async () => {
-		let res = await fetch(`https:/jsonplaceholder.typicode.com/todos/`)
+		let res = await fetch(`https://jsonplaceholder.typicode.com/todos/`)
 
 		return res.json()
 	}
