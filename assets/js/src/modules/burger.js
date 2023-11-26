@@ -28,7 +28,7 @@ export const burger = () => {
 
 
 
-        if (e.target.closest('.header__menu-button')) {   // 
+        if (e.target.closest('.header__menu-button')) {    
 
             if (!document.querySelector('.header__menu_active')) {
                 openMenu()
@@ -39,7 +39,7 @@ export const burger = () => {
         }
 
         if (e.target.closest('a.nav-header__link') || e.target.closest('.header__contact')) {
-            // e.preventDefault()
+            e.preventDefault()
             if (document.querySelector('.header__menu_active')) {
 
                 closeMenu()

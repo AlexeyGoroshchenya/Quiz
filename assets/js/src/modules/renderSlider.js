@@ -46,7 +46,7 @@ export const renderSlider = () => {
 
 
 	const getReviews = async () => {
-		let res = await fetch(`https://jsonplaceholder.typicode.com/todos/`)
+		let res = await fetch(`https:/jsonplaceholder.typicode.com/todos/`)
 
 		return res.json()
 	}
@@ -94,7 +94,8 @@ export const renderSlider = () => {
 		try {
 			getReviews().then((res) => {
 
-				//this would be the assignment of the reviews variable. but since in this case only an imitation of working with the server, reviews is already declared as a local variable and contains all the data for rendering
+				console.log('здесь было бы присвоение переменной reviews. но раз это только имитация работы сервера, она захардкожена ранее в коде');
+				
 				renderSlides(reviews)
 
 

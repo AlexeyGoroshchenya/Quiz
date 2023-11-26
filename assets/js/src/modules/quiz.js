@@ -38,7 +38,7 @@ export const quiz = () => {
 
 
     const getQuestions = async (num) => {
-        let res = await fetch(`https://jsonplaceholder.typicode.com/todos/${num + 1}`)
+        let res = await fetch(`https:/jsonplaceholder.typicode.com/todos/${num + 1}`)
 
         return res.json()
     }
@@ -134,13 +134,15 @@ export const quiz = () => {
             document.querySelector('.quiz__button_prev').style.display = 'block'
             :
             document.querySelector('.quiz__button_prev').style.display = 'none'
+
+            document.querySelector('.quiz').scrollIntoView({ behavior: "smooth", block: "start", inline: "start" })
     }
 
     const sendAnswers = async () => {
 
 
 
-        return await fetch('https://jsonplaceholder.typicode.com/posts', {
+        return await fetch('https:/jsonplaceholder.typicode.com/posts', {
             method: 'POST',
             body: JSON.stringify(answerData),
             headers: {
@@ -171,7 +173,9 @@ export const quiz = () => {
                 document.querySelector('.quiz__textbox_start').style.display = 'none'
                 document.querySelector('.quiz__textbox_finish').style.display = 'block'
                 historyQuiz.style.display = 'none'
+                document.querySelector('.quiz').scrollIntoView({ behavior: "smooth", block: "start", inline: "start" })
                 hideLoader()
+                
             })
 
         } catch (error) {
@@ -213,7 +217,9 @@ export const quiz = () => {
                 if (res) {
                     document.querySelector('.quiz').style.display = 'flex'
                     document.querySelector('.quiz__textbox_start').style.display = 'block'
-                    //тут было бы привоение значение переменной questions, но раз это только имитация работы сервера, переменная захардкожена тут в коде
+
+                    console.log('тут было бы привоение значение переменной questions, но раз это только имитация работы сервера, переменная захардкожена прямо в коде');
+                    
 
                     renderQuestion(0)
                     renderHistory()
@@ -243,12 +249,14 @@ export const quiz = () => {
 
     document.addEventListener('click', (e) => {
 
+        if(e.target === quizSelect){quizInput.value = e.target.value}
+
 
         if (e.target.closest('a.home__button')){
             e.preventDefault()
 
             let anchor = e.target.href.slice(e.target.href.indexOf('#'))
-            document.querySelector(anchor).scrollIntoView({ behavior: "smooth", block: "center", inline: "start" }) //
+            document.querySelector(anchor).scrollIntoView({ behavior: "smooth", block: "start", inline: "start" }) 
 
         }
 

@@ -38,7 +38,7 @@ export const nav = () => {
             e.preventDefault()
 
             let anchor = e.target.href.slice(e.target.href.indexOf('#'))
-            document.querySelector(anchor).scrollIntoView({ behavior: "smooth", block: "center", inline: "start" }) //
+            document.querySelector(anchor).scrollIntoView({ behavior: "smooth", block: "center", inline: "start" }) 
 
         }
 

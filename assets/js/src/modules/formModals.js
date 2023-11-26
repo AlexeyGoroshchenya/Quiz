@@ -27,19 +27,14 @@ export const formModals = () => {
 
     const sendForm = async (data) => {
 
+        console.log('данные в атрибуте data в данном случае собраны в объект formData. jsonplaceholder не поддерживает formData поэтому тут такой оброт и файл с запросом не уходит. иначе нужно было бы приложить formData в body запроса и поменять headers Content-type на multipart/form-data');
         console.log(Object.fromEntries(data));
 
+        
 
-        // данные в атрибуте data в данном случае собраны в объект formData
-        //jsonplaceholder не поддерживает formData поэтому тут ничего не отправляется. иначе нужно было бы приложить его в body запроса и поменять headers Content-type на multipart/form-data
-
-        let res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+        let res = await fetch('https:/jsonplaceholder.typicode.com/posts', {
             method: 'POST',
-            body: JSON.stringify({
-                name: 'foo',
-                body: 'bar',
-                userId: 1,
-            }),
+            body: JSON.stringify(Object.fromEntries(data)),
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
             },
@@ -73,7 +68,8 @@ export const formModals = () => {
 
         let message = true
 
-        // здесь бы использовать более адекватные критерии валидации, а заодно валидировать остальные инпуты формы, но для демонстрации вот так сделал 
+        console.log('здесь бы использовать более адекватные критерии валидации, а заодно валидировать остальные инпуты формы, но для демонстрации вот так сделал ');
+        
 
         if (modalMessage.value.length < 2) {
             message = false
@@ -147,7 +143,8 @@ export const formModals = () => {
 
                 let fileNameStart = e.target.value.indexOf('fakepath\\') + 9
 
-                //на мобильных разрешениях не будет хватать наглядности что файл добавлен
+                console.log('на мобильных разрешениях не будет хватать наглядности что файл добавлен. я бы добавил какой-то элемент, отражающий добавление файла');
+                
                 e.target.closest('.form-modal__upload').querySelector('span:first-child').textContent = e.target.value.slice(fileNameStart)
 
                 if (e.target.files[0].size > 1e+6) {

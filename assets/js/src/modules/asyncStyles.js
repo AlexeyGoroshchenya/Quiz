@@ -10,7 +10,7 @@ export const asyncStyles = () => {
     createLink('assets/css/reviews.css')
     createLink('assets/css/modal.css')
     createLink('assets/css/footer.css')
-    createLink('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap')
+    createLink('https:/fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap')
 
 
 

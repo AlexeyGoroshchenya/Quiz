@@ -81,10 +81,23 @@
       width: 48px;
     }
   }
-  
-  .modal__close:hover {
-    transform: scale(1.1);
+
+  .modal__close svg{
+    stroke: black;
+    
   }
+
+  .modal__close:hover {
+    background-color: #9E00FF;
+    border: 1px solid #9E00FF;
+    transform: scale(1.1);
+    
+  }
+
+.modal__close:hover svg {
+  stroke: white;
+}
+  
   
   .modal__title {
     font-family: NeueMachina;
