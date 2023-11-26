@@ -99,6 +99,7 @@ export const quiz = () => {
         }
 
         if(window.innerWidth < 768) {
+            console.log(window.innerWidth);
             document.querySelector('.quiz').scrollIntoView({ behavior: "smooth", block: "start", inline: "start" })
         }
         
