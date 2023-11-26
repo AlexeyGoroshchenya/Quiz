@@ -97,6 +97,11 @@ export const quiz = () => {
                 }
             })
         }
+
+        if(window.innerWidth < 768) {
+            document.querySelector('.quiz').scrollIntoView({ behavior: "smooth", block: "start", inline: "start" })
+        }
+        
     }
 
     const renderQuestion = (num) => {
@@ -107,6 +112,7 @@ export const quiz = () => {
             quizQuestion.dataset.question = num + 1
             quizQuestion.dataset.type = questions[num].type
             quizAnswers.innerHTML = ''
+            document.querySelector('.quiz__input').style.display = 'none'
             questions[num].answers.forEach((item, index) => {
 
                 quizAnswers.innerHTML += `<div class="quiz__answer" data-num="${index + 1}"> <input type="${questions[num].type}"> ${item}</div>`
@@ -135,7 +141,7 @@ export const quiz = () => {
             :
             document.querySelector('.quiz__button_prev').style.display = 'none'
 
-            document.querySelector('.quiz').scrollIntoView({ behavior: "smooth", block: "start", inline: "start" })
+            
     }
 
     const sendAnswers = async () => {
