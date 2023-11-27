@@ -24,7 +24,7 @@
 }
 
 .footer__logo {
-    font-family: NeueMachina;
+    font-family: var(--secondary-font);
     font-size: 30px;
     font-weight: 700;
     line-height: 35px;
@@ -62,7 +62,7 @@
 }
 
 .contact__text {
-    font-family: NeueMachina;
+    font-family: var(--secondary-font);
     font-size: 45px;
     font-weight: 700;
     line-height: 46px;

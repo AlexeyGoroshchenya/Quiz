@@ -51,7 +51,7 @@
 }
 
 .history-quiz__item:hover {
-    background-color: #9E00FF;
+    background-color: var(--hover-color);
 }
 
 .history-quiz__item::after {
@@ -116,7 +116,7 @@
 }
 
 .quiz__title {
-    font-family: NeueMachina;
+    font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 72px;
     line-height: 69.48px;
@@ -133,7 +133,7 @@
 
 .quiz__question {
     font-weight: 500;
-    font-size: 20px;
+    font-size: var(--main-font-size);
     line-height: 23.48px;
     padding-bottom: 64px;
 }
@@ -164,9 +164,9 @@
 }
 
 .quiz__answer:hover {
-    background-color: #9E00FF;
+    background-color: var(--hover-color);
     color: #FFFFFF;
-    border: 1px solid #9E00FF;
+    border: 1px solid var(--hover-color);
 }
 
 .quiz__answer_active {
@@ -220,8 +220,8 @@
 
 .quiz__answer_active:has(input[type="radio"]):hover::after,
 .quiz__answer_active:has(input[type="checkbox"]):hover::after {
-    background-color: #9E00FF;
-    border: 1px solid #9E00FF;
+    background-color: var(--hover-color);
+    border: 1px solid var(--hover-color);
 }
 
 .quiz__answer_active:has(input[type="radio"]):hover::after {
@@ -248,7 +248,7 @@
 
 .quiz__input input {
     width: 100%;
-    font-size: 20px;
+    font-size: var(--main-font-size);
 }
 
 .quiz__input p::after {
@@ -271,7 +271,7 @@
     appearance: none;
     background: url('../img/main/arrow-up.png') no-repeat right;
     background-position-x: calc(100% - 8px);
-    font-size: 20px;
+    font-size: var(--main-font-size);
 }
 
 .quiz__input select::-ms-expand {

@@ -52,7 +52,7 @@
     font-size: 96px;
     line-height: 92px;
     font-weight: 700;
-    font-family: NeueMachina;
+    font-family: var(--secondary-font);
 }
 
 @media (max-width: 1023.98px) {
@@ -71,7 +71,7 @@
 }
 
 .home__subtitle {
-    font-size: 20px;
+    font-size: var(--main-font-size);
     background-color: #ffffffcb;
     border-radius: 10px;
 }

@@ -5,7 +5,7 @@
     align-items: center;
 
     padding: 15px 48px;
-    font-size: 20px;
+    font-size: var(--main-font-size);
     line-height: 24px;
     position: fixed;
     top: 0;
@@ -29,7 +29,7 @@
 
 .header__logo {
 
-    font-family: NeueMachina;
+    font-family: var(--secondary-font);
     font-size: 36px;
     font-weight: 700;
     line-height: 35px;
