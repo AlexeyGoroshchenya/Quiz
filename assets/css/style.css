@@ -111,13 +111,14 @@ h6 {
 :root{
   --hover-color: #9E00FF;
   --main-font-size: 20px;
-  --secondary-font: NeueMachina;
+  --secondary-font: NeueMachina; 
 }
 
 body {
   background-color: #ffffff;
   font-family: 'Raleway', sans-serif;
   overflow-x: auto;
+  background: #F9EFFF;
 }
 
 .body__wrapper {

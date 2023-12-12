@@ -62,7 +62,7 @@ export const renderSlider = () => {
 
 			div.innerHTML = `
 			<div class="slide-reviews__body">
-							<div class="slide-reviews__ava"> <img src="${element.avatar}" alt="">
+							<div class="slide-reviews__ava"> <img src="${element.avatar}" alt="" loading="lazy">
 							</div>
 
 							<div class="slide-reviews__frame">

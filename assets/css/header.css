@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    max-height: 114px;
     padding: 15px 48px;
     font-size: var(--main-font-size);
     line-height: 24px;
@@ -79,7 +79,7 @@
 .nav-header__list {
     flex: 1 1 auto;
     display: flex;
-    flex-wrap: wrap;
+    
     justify-content: center;
     align-items: center;
     gap: 32px;

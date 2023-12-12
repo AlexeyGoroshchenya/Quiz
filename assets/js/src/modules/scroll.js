@@ -6,11 +6,6 @@ export const scroll = () => {
     const quizLink = document.querySelector('.nav-header__link[href="#quiz"]')
     const reviewsLink = document.querySelector('.nav-header__link[href="#reviews"]')
 
-
-
-
-    window.addEventListener('scroll', function () {
-
         const changeClasses = (el) => {
             if (el.classList.contains('nav-header__link-active')) return
 
@@ -21,6 +16,11 @@ export const scroll = () => {
 
         let quizTop = document.querySelector('#quiz').getBoundingClientRect().top
         let reviewsTop = document.querySelector('#reviews').getBoundingClientRect().top
+
+
+
+    window.addEventListener('scroll', function () {
+
 
         if (window.scrollY < quizTop) {
             changeClasses(homeLink)
