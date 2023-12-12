@@ -74,6 +74,7 @@
     font-size: var(--main-font-size);
     background-color: #ffffffcb;
     border-radius: 10px;
+    padding: 20px;
 }
 
 @media (max-width: 767.98px) {
